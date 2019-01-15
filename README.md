@@ -8,5 +8,5 @@
   
 A faire :  
 * on fait une `ping` hôte --> VM :  
-
+<img src="capture.png">
   
