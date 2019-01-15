@@ -7,7 +7,8 @@
 ## 5.Faire joujou avec quelques commandes
   
 A faire :  
-* on fait un `ping` hôte --> VM : 
+* on fait un `ping` hôte --> VM :  
+
 ![Blop](./ping_vm_1.png "Blap")
 
 * on fait un `ping` VM --> hôte :
