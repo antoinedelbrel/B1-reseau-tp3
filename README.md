@@ -42,7 +42,16 @@ Pour vérifier que notre serveur SSH écoute sur notre port on utilise la comman
 Cependant la connexion n'aboutit pas quand on essaie de se connecter a ce port. Elle est impossible car le firewall ne l'autorise pas.  
 Pour que le firewall l'autorise il faut taper la commande `firewall-cmd --add-port=2222/tcp --permanent` on fait la connexion sur le port 2222 ensuite on utilise la commande `firewall-cmd --reload` et grâce a cela les modifications sont ajoutées.
 
-### B.`netcat`
+### B.`netcat`:
+* Tout d'abord dans un premier terminal sur la VM on crée le serveur netcat : `nc -l 5454`.
+Ensuite on autorise la connexion à ce port en faisant les deux commande :   
+`firewall-cmd --add-port=5454/tcp --permanent` `firewall-cmd --reload`  
+
+*Ensuite dans le second terminal on se connecte au serveur netcat : `nc 192.168.127.10 5454`.
+
+* Enfin dans le troisième terminal on visualise la connexion : `ss -l4 -n -p`.
+
+On remarque que le serveur netcat ecoute sur le port 5454.
 
 
 
