@@ -26,6 +26,14 @@ On possède désormais la commande dig. Maintenant on fait la commande `dig ynov
 On obtient exactement la même en faisant `dig google.com`.
 
 
+# II.Notion de ports et de SSH
+## 1.Exploration des ports locaux
+* Utilisation de `ss` : 
+On fait un `ss -p -n -l4`, le `-p` permet de connaitre l'application qui ecoute sur ce port, le `-n` permet d'avoir un numéro de port plutot qu'un nom et enfin le `-l4` nous dit qu'il faut se mettre sur l'IPV4 (l=listening).  
+
+## 2.SSH
+On connecte putty a notre VM en mettant l'adresse IP de notre VM dans putty, maintenant on contrôle la VM grâce a putty.
+
 
 
 
