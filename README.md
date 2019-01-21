@@ -51,12 +51,35 @@ Ensuite on autorise la connexion à ce port en faisant les deux commande :
 
 * Enfin dans le troisième terminal on visualise la connexion : `ss -l4 -n -p`.
 
-On remarque que le serveur netcat ecoute sur le port 5454.
+On remarque que le serveur netcat écoute sur le port 5454.
 
 # III.Routages statiques
 
+## 1. Préparation des hôtes 
+* Préparation avec câble:   
+Les deux PCs se ping parfaitement après les avoir branchés,et les deux cartes ethernet sont sur le réseau `192.168.112.2/30` et `192.168.112.1/30`.
 
+* Préparation VirtualBox  
+PC1 : réseau 1 : 192.168.101.0/24  
+PC2 : réseau 2 : 192.168.102.0/24  
+VM1 (sur PC1) : 192.168.101.10  
+VM2 (sur PC2) : 192.168.102.10
 
+* Check   
+On s'est bien assuré que le PC1 et le PC2 se ping en utilisant le réseau 12, la VM1 et le PC1 se ping en utilisant le réseau 1 et que la VM2 et le PC2 se ping en utilisant le réseau 2.  
 
- 
-  
+Le check est réussi mais on a oublié de faire les captures d'écran et on s'est rendu compte trop tard qu'on ne pouvait pas le faire seul.
+
+* Activation du routage sur les PCs   
+Pour cela il suffit juste de suivre les instruction sur le tp sans faire d'erreur.  
+
+## 2.Configuration du routage
+Il nous est demade de faie un bilan des adresses IP portés par chacune des interfaces utilisées dans le TP, pour les 4 machines (PC1, PC2, VM1, VM2).
+
+Pour les hôtes :  
+PC1/Carte Ethernet : `192.168.112.1`  
+PC2/Carte Ethernet : `192.168.112.2`   
+VM1 : `192.168.101.10`  
+VM2 : `192.168.102.10`
+
+Pour le duo nous ne sommes pas allés plus loin.
