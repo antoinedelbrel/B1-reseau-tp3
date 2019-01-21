@@ -53,6 +53,7 @@ Ensuite on autorise la connexion à ce port en faisant les deux commande :
 
 On remarque que le serveur netcat ecoute sur le port 5454.
 
+# III.Routages statiques
 
 
 
