@@ -34,6 +34,16 @@ On fait un `ss -p -n -l4`, le `-p` permet de connaitre l'application qui ecoute 
 ## 2.SSH
 On connecte putty a notre VM en mettant l'adresse IP de notre VM dans putty, maintenant on contrôle la VM grâce a putty.
 
+## 3.Firewall
+### A.SSH : 
+On change le numéro du port sur lequel notre serveur écoute en accedant au fichier `/etc/ssh/sshd_config` avec la commande `sudo nano` (on met le port numéro 2222 en enlevant le # devant pour que ça ne soit pas un commentaire). Tout cela on le fait sur Putty.  
+Pour redémarrer le serveur et enregistrer les modifications on tape la commande `systemctl restart sshd`.  
+Pour vérifier que notre serveur SSH écoute sur notre port on utilise la commande `ss-altnp4`.  
+Cependant la connexion n'aboutit pas quand on essaie de se connecter a ce port. Elle est impossible car le firewall ne l'autorise pas.  
+Pour que le firewall l'autorise il faut taper la commande `firewall-cmd --add-port=2222/tcp --permanent` on fait la connexion sur le port 2222 ensuite on utilise la commande `firewall-cmd --reload` et grâce a cela les modifications sont ajoutées.
+
+### B.`netcat`
+
 
 
 
